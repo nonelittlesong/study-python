@@ -1,5 +1,4 @@
 # range
-## 1、 函数语法
 ```py
 range(start, stop[, step])
 ```
