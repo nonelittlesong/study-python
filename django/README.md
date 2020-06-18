@@ -1,6 +1,11 @@
 
 - [英文官网](https://www.djangoproject.com/)  
 
+## Install
+```sh
+$ sudo python3 -m pip install django
+```
+
 ## 前后端分离
 
 ### react
