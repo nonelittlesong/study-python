@@ -60,3 +60,19 @@ That will cost $ {{ amount }} per year.
 That will cost $ {{ amount }} per {{ years }} years.
 {% endblocktrans %}
 ```
+
+Reverse URL lookups cannot be carried out within the blocktrans and should be retrieved (and stored) beforehand:  
+```django
+{% url 'path.to.view' arg arg2 as the_url %}
+{% blocktrans %}
+This is a URL: {{ the_url }}
+{% endblocktrans %}
+```
+
+`asvar` 只翻译、 不显示：  
+```django
+{% blocktrans asvar the_title %}The title is {{ title }}.{% endblocktrans %}
+<title>{{ the_title }}</title>
+<meta name="description" content="{{ the_title }}">
+```
+
