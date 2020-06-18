@@ -21,3 +21,7 @@
 ```
 
 ### blocktrans 模板标签
+翻译字符串和变量的组合形式：  
+```django
+{% blocktrans %}This string will have {{ value }} inside.{% endblocktrans %}
+```
