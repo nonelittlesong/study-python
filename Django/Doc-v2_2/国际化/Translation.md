@@ -25,3 +25,38 @@
 ```django
 {% blocktrans %}This string will have {{ value }} inside.{% endblocktrans %}
 ```
+为了访问对象属性或使用模板过滤器，需要在标签中绑定：  
+```django
+{% blocktrans with amount=article.price %}
+That will cost $ {{ amount }}.
+{% endblocktrans %}
+
+{% blocktrans with myvar=value|filter %}
+This will have {{ myvar }} inside.
+{% endblocktrans %}
+
+<!-- 可以在一个标签中使用多个表达式 -->
+{% blocktrans with book_t=book|title author_t=author|title %}
+This is {{ book_t }} by {{ author_t }}
+{% endblocktrans %}
+
+<!-- 其他格式 -->
+{% blocktrans with book|title as book_t and author|title as author_t %}
+```
+
+不能在 `blocktrans` 标签中使用其他的块标签（例如： `{% for %}` 和 `{% if %}`）。  
+
+复数形式：  
+```django
+{% blocktrans count counter=list|length %}
+There is only one {{ name }} object.
+{% plural %}
+There are {{ counter }} {{ name }} objects.
+{% endblocktrans %}
+
+{% blocktrans with amount=article.price count years=i.length %}
+That will cost $ {{ amount }} per year.
+{% plural %}
+That will cost $ {{ amount }} per {{ years }} years.
+{% endblocktrans %}
+```
