@@ -16,7 +16,7 @@ urlpatterns = [
     path('args/', views.params_first),
     re_path(r'^params/(\w+)/(\d+)/$', views.params),
     path('params2/<username>/<password>/', views.params2)，
-    path('params3/', views.params2, {'user': '李四', 'pwd': '123'}),
+    path('params3/', views.params3, {'user': '李四', 'pwd': '123'}),
     re_path(r'^params4/(?P<username>\w+)/(?P<id>\d+)/$', views.params4),
 ]
 ```
