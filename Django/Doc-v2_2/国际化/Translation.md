@@ -85,8 +85,8 @@ This is a URL: {{ the_url }}
 ### [django 如何确定语言偏好](https://docs.djangoproject.com/en/2.2/topics/i18n/translation/#how-django-discovers-language-preference)
 如果没有用 `LocaleMiddleware` 中间件，根据系统的 `LANGUAGE_CODE` 确定用户语言。  
 如果使用了 `LocaleMiddleware` 中间件，则遵循如下的算法：  
-- 首先，如果用了 [i18n_patterns](https://docs.djangoproject.com/en/2.2/topics/i18n/translation/#module-django.conf.urls.i18n)，查看 URL 中的 语言前缀。  
-- 其次，查看 `LANGUAGE_SESSION_KEY`。  
-- 其次，查看 cookie。  
-- 其次，查看 HTTP 的 `Accept-Language` 头，由浏览器设定。  
-- 最后，查看 `LANGUAGE_CODE`。  
+1. 首先，如果用了 [i18n_patterns](https://docs.djangoproject.com/en/2.2/topics/i18n/translation/#module-django.conf.urls.i18n)，查看 URL 中的 语言前缀。  
+2. 其次，查看 `LANGUAGE_SESSION_KEY`。  
+3. 其次，查看 cookie。  
+4. 其次，查看 HTTP 的 `Accept-Language` 头，由浏览器设定。  
+5. 最后，查看 `LANGUAGE_CODE`。  
