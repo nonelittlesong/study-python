@@ -1,3 +1,13 @@
+## [国际化 JavaScript 代码](https://docs.djangoproject.com/en/3.0/topics/i18n/translation/#internationalization-in-javascript-code)  
+问题：  
+- JS 无法访问 `gettext` 实现。  
+- JS 无法访问 `.po .mo` 文件；需要通过服务器传递。  
+- `translation catalog` 需要尽可能小。  
+
+Django 通过 `JavaScriptCatalog` 视图解决问题。  
+
+
+
 ## 国际化 Python 代码
 
 ## 国际化模板
