@@ -19,7 +19,7 @@ mysite/              # 名称无任何影响，可以重命名
 >**注意：**  
 >不要在生产模式中使用 Django 内置的 Server！！  
 
-## 二、创建 Polls app
+## 二、创建 app
 ```sh
 $ python3 manage.py startapp polls
 ```
