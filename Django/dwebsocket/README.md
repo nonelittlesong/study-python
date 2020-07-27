@@ -24,3 +24,8 @@ pip3 install dwebsocket[==x.x.xx]
 ### 属性
 
 ### 方法
+#### is_websocket()
+
+#### WebSocket.wait()
+
+#### WebSocket.read()
