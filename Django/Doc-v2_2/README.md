@@ -40,14 +40,14 @@ polls/
 ```
 
 ### 视图
-编写 `poll/views.py`  
+编写 `polls/views.py`  
 ```py
 from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 ```
-编写 `poll/urls.py`  
+编写 `polls/urls.py`  
 ```py
 from django.urls import path
 
