@@ -16,6 +16,8 @@ mysite/              # 名称无任何影响，可以重命名
         wsgi.py      # 作为你的项目的运行在 WSGI 兼容的Web服务器上的入口
 ```
 
+- [__init__.py](https://stackoverflow.com/questions/119167/adding-code-to-init-py)  
+
 >**注意：**  
 >不要在生产模式中使用 Django 内置的 Server！！  
 
