@@ -33,6 +33,7 @@ for rootDir in rootDirs:
     top_failimgs = glob.glob(rootDir+'/*/fail_image/Cam[1,2,3]_*.png')
     side_failimgs = glob.glob(rootDir+'/*/fail_image/Cam[4,6]_*.png')
 
+    # Step3 分离正、侧面瑕疵
     # 获取同时包含正侧面瑕疵的目录
     top_dirnames = set(map(getDirname, top_failimgs))
     side_dirnames = set(map(getDirname, side_failimgs))
@@ -89,4 +90,3 @@ for rootDir in rootDirs:
                 newpath = newpng.rstrip(newpng.split('/')[-1])
                 os.makedirs(newpath)
                 shutil.copy(side_failimg, newpng)
-                
