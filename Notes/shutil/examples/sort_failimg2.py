@@ -41,7 +41,6 @@ for rootDir in rootDirs:
 
     top_big_failimgs = list(set(map(getbigimg, top_failimgs)))
     for top_big_failimg in top_big_failimgs[:]:
-        print(top_big_failimg)
         top_big_failimg_ = top_big_failimg+'_'
         if os.path.exists(top_big_failimg_):
             top_big_failimgs.append(top_big_failimg_)
