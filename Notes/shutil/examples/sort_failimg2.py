@@ -30,15 +30,14 @@ for rootDir in rootDirs:
                 print(all2ndDir)
                 shutil.rmtree(all2ndDir)
 
-    top_failimgs = glob.glob(rootDir+'/*/fail_image/Cam[1,2,3]_*.png')
-    side_failimgs = glob.glob(rootDir+'/*/fail_image/Cam[4,6]_*.png')
-
     # Step3 分离正、侧面瑕疵
+    top_failimgs = glob.glob(rootDir+'/[!i]*/fail_image/Cam[1,2,3]_*.png')
+    side_failimgs = glob.glob(rootDir+'/[!i]*/fail_image/Cam[4,6]_*.png')
     # 获取同时包含正侧面瑕疵的目录
     top_dirnames = set(map(getDirname, top_failimgs))
     side_dirnames = set(map(getDirname, side_failimgs))
     both_dirnames = top_dirnames & side_dirnames
-
+    # 获取大图
     top_big_failimgs = list(set(map(getbigimg, top_failimgs)))
     for top_big_failimg in top_big_failimgs[:]:
         top_big_failimg_ = top_big_failimg+'_'
