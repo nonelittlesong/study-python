@@ -1,3 +1,5 @@
+# [etree API](https://docs.python.org/zh-cn/3.8/library/xml.etree.elementtree.html?highlight=etree)
+
 ## 解析 XML
 
 xml 文件：  
