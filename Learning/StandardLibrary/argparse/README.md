@@ -11,4 +11,6 @@ args = parser.parse_args()
 print(args.accumulate(args.integers))
 ```
 
-## 
+## add_argument()
+
+### type
