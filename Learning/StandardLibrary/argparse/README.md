@@ -19,3 +19,12 @@ print(args.accumulate(args.integers))
 ## [退出方法](https://docs.python.org/zh-cn/3.8/library/argparse.html#exiting-methods)
 - ArgumentParser.exit(status=0, message=None)  
 - ArgumentParser.error(message)  
+
+### Notes
+错误一：  
+```diff
+- TypeError: error() missing 1 required positional argument: 'self'
+```
+原因：  
+没有对类进行实例化！
+
