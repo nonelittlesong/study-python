@@ -86,7 +86,7 @@ country {'name': 'Panama'}
 ### Element.find()
 找带特定标签的 *第一个* 子级。  
 
-### Element.text()
+### Element.text
 访问元素的文本内容。  
 
 ### Element.get()
