@@ -14,3 +14,8 @@ print(args.accumulate(args.integers))
 ## add_argument()
 
 ### type
+
+
+## [退出方法](https://docs.python.org/zh-cn/3.8/library/argparse.html#exiting-methods)
+- ArgumentParser.exit(status=0, message=None)  
+- ArgumentParser.error(message)  
