@@ -1,0 +1,29 @@
+<annotation>
+  <object objectName="测试添加和修改属性">
+    <name>1</name>
+    <bndbox>
+      <xmin>67</xmin>
+      <ymin>203</ymin>
+      <xmax>561</xmax>
+      <ymax>367</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>3</name>
+    <bndbox>
+      <xmin>565</xmin>
+      <ymin>370</ymin>
+      <xmax>757</xmax>
+      <ymax>1079</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>2</name>
+    <bndbox>
+      <xmin>755</xmin>
+      <ymin>69</ymin>
+      <xmax>1532</xmax>
+      <ymax>365</ymax>
+    </bndbox>
+  </object>
+<path>修改后的文本字段</path></annotation>
