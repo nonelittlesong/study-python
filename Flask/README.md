@@ -12,7 +12,7 @@
   - watchdog - 重载器
 </details>
 
-## 命令
+## 一、 命令
 - `flask --help` - 查看帮助
 ### 启动内嵌服务器：  
 ```sh
