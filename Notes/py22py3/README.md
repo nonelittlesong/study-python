@@ -1,5 +1,16 @@
 # Python2 转 Python3 引起的问题
 
+<details>
+  <summary>参考：</summary>
+  
+  - [2to3](https://docs.python.org/zh-cn/3/library/2to3.html)  
+</details>
+
+## 内置函数
+
+### reduce
+将 `reduce()` 转换为 `functools.reduce()`。  
+
 ## Dictionary view objects
 由 dict.keys(), dict.values() 和 dict.items() 返回的 视图对象。  
 提供一个字典实体的动态视图。这意味着字典改变时，这个视图会反映相应的变化。  
