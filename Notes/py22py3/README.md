@@ -20,6 +20,10 @@ dict.keys()
 valueList = list(dict.values())
 keyList = list(dict)
 ```
+但仍适用 `sorted()` 函数：  
+```py
+sortedList = sorted(dict[keyname].items(), key=lambda x: x[1], reverse=True)
+```
 
 ## 运算符
 
