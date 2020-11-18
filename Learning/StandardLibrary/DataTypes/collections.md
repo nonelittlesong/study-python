@@ -30,3 +30,8 @@ c['sausage'] = 0                        # counter entry with a zero count
 del c['sausage']                        # del actually removes the entry
 ```
 
+运算：  
+```py
+# 加法
+Counter({'a': 1, 'b': 2}) + Counter({'b': 2, 'c': 3}) # collections.Counter({'a': 1, 'c': 3, 'b': 4})
+```
