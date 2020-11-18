@@ -1,6 +1,9 @@
 # 内置函数
 
-## sorted(iterable, *, key=None, reverse=False)
+## filter(function, iterable)
+function 为 None 时， iterable 中为假的元素会被删除。  
+
+## sorted(iterable, \*, key=None, reverse=False)
 对 iterable **稳定**排序。  
 
 参数：  
