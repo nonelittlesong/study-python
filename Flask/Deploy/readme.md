@@ -6,6 +6,8 @@
 - [uWSGI 官方中文文档](https://uwsgi-docs-zh.readthedocs.io/zh_CN/latest/index.html)  
 - [Supervisor](http://www.supervisord.org/) — 进程管理系统。  
 - [通过Nginx部署flask项目和静态站点 | 简书](https://www.jianshu.com/p/aed6b5204225)  
+- [在 Ubuntu 上使用 Nginx 部署 Flask 应用 | oschina](https://www.oschina.net/translate/serving-flask-with-nginx-on-ubuntu)  
+- [Flask+uwsgi+Nginx部署应用 | 简书](https://www.jianshu.com/p/84978157c785)  
 </details>
 
 <details>
