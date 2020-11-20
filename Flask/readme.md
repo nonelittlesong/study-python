@@ -12,7 +12,7 @@
   - watchdog - 重载器
 </details>
 
-## 一、 命令
+## 一、命令
 - `flask --help` - 查看帮助
 ### 启动内嵌服务器：  
 ```sh
@@ -41,7 +41,7 @@ def hello():
     click.echo('Hello, Human!')
 ```
 
-## pipenv
+## 二、pipenv
 1、 在当前用户下安装 pipenv
 ```sh
 $ pip3 install --user pipenv
