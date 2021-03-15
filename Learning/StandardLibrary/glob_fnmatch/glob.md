@@ -1,6 +1,8 @@
 
 ## [glob.glob(pathname, *, recursive=False)](https://docs.python.org/zh-cn/3/library/glob.html?highlight=glob#glob.glob)
-常用通配符：  
+
+常用通配符：
+
 | 符号 | 作用 |
 | --- | --- |
 | * | 匹配0个或多个任意字符 |
