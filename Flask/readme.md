@@ -1,59 +1,76 @@
 # Flask
 
-<details>
-  <summary>参考：</summary>
-  
-</details>
+轻量的 [WSGI](https://wsgi.readthedocs.io/en/latest/) 网页应用框架，基于 [Werkzeug](https://palletsprojects.com/p/werkzeug/)（综合的 WSGI 库） 和 [Jinja](https://palletsprojects.com/p/jinja/)（Python 模板引擎）。
 
-<details>
-  <summary>依赖：</summary>
-  
-  - python-dotenv - 环境配置工具
-  - watchdog - 重载器
-</details>
+参考：
 
-## 一、命令
-- `flask --help` - 查看帮助
-### 启动内嵌服务器：  
-```sh
-$ flask run
-# --host=0.0.0.0 对外可见
-# --port=xxxx    设置端口
+- [thread-local](http://www.threadlocal.cn/) — 线程局部变量
+
+## 1. 依赖
+
+以下软件在安装 Flask 后会自动安装：
+
+- [Werkzeug](https://palletsprojects.com/p/werkzeug/)
+- [Jinja](https://palletsprojects.com/p/jinja/)
+- [MarkupSafe](https://palletsprojects.com/p/markupsafe/) — 转义用户的输入
+- [ItsDangerous](https://palletsprojects.com/p/itsdangerous/) — 安全地标记数据，保护 session 和 cookie。
+- [Click](https://palletsprojects.com/p/click/) — 命令行应用框架。
+
+可选依赖（不会自动安装，Flask 会在你安装了它们时使用）：
+
+- [Blinker](https://pythonhosted.org/blinker/) 为 [Signals](https://flask.palletsprojects.com/en/1.1.x/signals/#signals) 提供支持
+- [SimpleJSON](https://simplejson.readthedocs.io/en/latest/) — JSON 编码和解码
+- [python-dotenv](https://github.com/theskumar/python-dotenv#readme) - 环境配置工具
+- [watchdog](https://pythonhosted.org/watchdog/) - 重载器
+
+## 2. 虚拟环境
+
+- venv — python3 自带 venv，不如 [virtualenv](https://virtualenv.pypa.io/en/latest/)。
+- pipenv — 推荐，相当于 virtualenv 和 pip 的合体。
+
+### 2.1. 创建虚拟环境
+
+创建项目文件夹和 venv 文件夹：
+
 ```
-规则：  
-- 寻找 app.py 和 wsgi.py 模块，并从中寻找名为 app 或 application 的程序实例。  
-- 从环境变量 FLASK_APP 对应的模块名/导入路径寻找名为 app 或 application 的程序实例。  
-- 安装 `python-dotenv`，环境变量 > .env > .flaskenv。  
+$ mkdir myproject
+$ cd myproject
+$ python3 -m venv venv
 
-### flask shell
-```sh
-$ flask shell
->>>
+## python2
+$ python2 -m virtualenv venv
 ```
 
-### 自定义命令
-- [click](https://click.palletsprojects.com)  
+开发项目前，激活相应的环境：
 
-```py
-@app.cli.command() # 参数 指令名称，默认为函数名
-def hello():
-    """Just say hello.""" # 帮助文档
-    click.echo('Hello, Human!')
+```
+$ . venv/bin/activate
 ```
 
-## 二、pipenv
-1、 在当前用户下安装 pipenv
+安装 Flask：
+
+```
+$ pip install Flask
+```
+
+## 3. Pipenv
+
+在当前用户下安装 pipenv：
+
 ```sh
 $ pip3 install --user pipenv
 ```
 
-&nbsp;  
-2、 创建虚拟环境
+创建虚拟环境：
+
 ```sh
 $ pipenv install
 ```
+
 报错
+
 ```diff
 - AttributeError: module 'os' has no attribute 'PathLike'
 ```
-原因： python 3.6 开始支持 [PathLike](https://docs.python.org/zh-cn/3/library/os.html?highlight=pathlike#os.PathLike)。  
+
+原因： python 3.6 才开始支持 [PathLike](https://docs.python.org/zh-cn/3/library/os.html?highlight=pathlike#os.PathLike)。  
