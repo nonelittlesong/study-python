@@ -34,7 +34,7 @@ def show_subpath(subpath):
     return 'Subpath %s' % escape(subpath)
 ```
 
-Converter 类型：
+转换器的类型：
 
 | Converter 类型 | 描述 |
 | --- | --- |
@@ -58,3 +58,13 @@ def about():
 
 - 使用 `/projects` 访问 `/projects/` 会重定向。
 - 使用 `/about/` 访问 `/about`，返回 404。
+
+## 3. 请求参数 request.args.get()
+
+```py
+@app.route('/record2')
+def record2():
+    return 'test %s %s' % (request.args.get('test'), request.args.get('test2'))
+```
+
+通过 `/record2?test=aaa&&test2=bbb` 访问。
