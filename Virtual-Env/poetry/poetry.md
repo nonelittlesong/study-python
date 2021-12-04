@@ -105,29 +105,3 @@ $ poetry env remove python3.7
 ## 查看 python 版本
 $ poetry run python -V
 ```
-
-## 比较 Pipenv
-
-pipenv 的依赖解析不稳定，例如：
-
-```
-pipenv install oslo.utils==1.4.0
-# 结果
-- Could not find a version that matches pbr!=0.7,!=2.1.0,<1.0,>=0.6,>=2.0.0
-```
-
-而 Poetry 能够给你正确的包：
-
-```
-poetry add oslo.utils=1.4.0
-# 结果
-  - Installing pytz (2018.3)
-  - Installing netifaces (0.10.6)
-  - Installing netaddr (0.7.19)
-  - Installing oslo.i18n (2.1.0)
-  - Installing iso8601 (0.1.12)
-  - Installing six (1.11.0)
-  - Installing babel (2.5.3)
-  - Installing pbr (0.11.1)
-  - Installing oslo.utils (1.4.0)
-```
